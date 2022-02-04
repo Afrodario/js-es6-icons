@@ -11,10 +11,33 @@
     flex-wrap: wrap;
 }
 
+main {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+
 /* Regole header */
 .header-bottom {
     background-color: #29b1dd;
-    text-align: center;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.header-bottom span {
+    padding: 0 10px;
+    color: white;
+    font-weight: bold;
+}
+
+h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #29b1dd;
+    margin-left: 20px;
+    padding: 10px;
+    font-size: 40px;
 }
 
 .icon-box {
@@ -23,12 +46,20 @@
     border-radius: 10px;
     width: calc(100% / 5 - 40px);
     background-color: white;
-    font-size: 30px;
+    font-size: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 20px;
+    box-shadow: 5px 5px;
+}
+
+.icon-box span {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-top: 10px;
 }
 
 /* Classi colore icone */

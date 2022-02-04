@@ -5,3 +5,28 @@
     box-sizing: border-box;
 }
 
+.container {
+    background-color: #dddddd;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Regole header */
+.header-bottom {
+    background-color: #29b1dd;
+    text-align: center;
+}
+
+.icon-box {
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: calc(100% / 5 - 40px);
+    background-color: white;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}

@@ -116,10 +116,39 @@ const icons = [
 //Creo un riferimento all'elemento container
 const container = document.getElementById("container");
 
-let content = "";
+//Invoco una funzione creata in precedenza
+createIcon(container, icons);
+
+
+
+//FUNZIONI
+//Creo una funzione apposita per stampare le icone
+function createIcon (container, icons) {
+
+    let content = "";
+    //Familiarizzo con l'utilizzo del ciclo forEach
+    icons.forEach(object => {
+        
+        content += `<div class="icon-box">
+        <i class="${object.family} ${object.prefix}${object.name} ${object.color}"></i>
+        <span>${object.name}</span>
+        </div>
+        `
+
+    });
+    //Inserisco nell'HTML le iterazioni del ciclo
+    container.innerHTML = content;
+};
+
+
+
+
+
 
 //Creo un ciclo che scorra tutti gli oggetti dell'array e crei un div
 //icon per ognuno di essi
+
+/*
 for (let i = 0; i < icons.length; i++) {
 
     content += `<div class="icon-box">
@@ -128,6 +157,4 @@ for (let i = 0; i < icons.length; i++) {
                 </div>
                 `
 }
-
-//Inserisco nell'HTML le iterazioni del ciclo
-container.innerHTML = content;
+*/

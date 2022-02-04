@@ -119,6 +119,34 @@ const container = document.getElementById("container");
 //Invoco una funzione creata in precedenza
 createIcon(container, icons);
 
+//Creo un riferimento all'elemento select dell'HTML
+const selectType = document.getElementById("selection");
+
+//Creo un ascoltatore di eventi che intercetti la selezione del menu select
+selectType.addEventListener("change", function() {
+
+    //Creo un riferimento al valore della selezione corrente (this)
+    let option = this.value;
+    console.log(option);
+
+    //Creo una condizione per la quale
+    //se il selettore è su all, invoca la funzione regolare di creazione icone
+    if (option == "all") {
+        createIcon(container, icons);
+        //altrimenti 
+    } else {
+        //filtra gli elementi di icons in un nuovo array
+        const newArray = icons.filter(icon => {
+            if (icon.type == option) {
+                return true;
+            }
+            return false;
+        });
+        //e invoca la funzione con i parametri del container e del nuovo array filtrato
+        createIcon(container, newArray);
+    }
+    
+});
 
 
 //FUNZIONI

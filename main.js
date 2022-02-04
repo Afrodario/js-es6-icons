@@ -1,4 +1,4 @@
-[
+const icons = [
 	{
 		name: 'cat',
 		prefix: 'fa-',
@@ -112,3 +112,22 @@
 		color: 'blue'
 	}
 ];
+
+//Creo un riferimento all'elemento container
+const container = document.getElementById("container");
+
+let content = "";
+
+//Creo un ciclo che scorra tutti gli oggetti dell'array e crei un div
+//icon per ognuno di essi
+for (let i = 0; i < icons.length; i++) {
+
+    content += `<div class="icon-box">
+                <i class="${icons[i].family} ${icons[i].prefix}${icons[i].name}"></i>
+                <span>${icons[i].name}</span>
+                </div>
+                `
+}
+
+//Inserisco nell'HTML le iterazioni del ciclo
+container.innerHTML = content;
